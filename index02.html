@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Efek Kertas</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: lightblue;
+      display: flex;
+      justify-content: center;
+    }
+
+    .paper {
+      background: #ffffff;  
+      width: 380px;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 
+        0 6px 18px rgba(0,0,0,0.12),
+        0 1px 0 #fff inset;
+      position: relative;
+    }
+
+    .paper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0.06;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(0,0,0,0.04) 0 1px, transparent 1px 4px);
+      pointer-events: none;
+    }
+  
+    .paper::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      right: 12px;
+      top: 12px;
+      background: linear-gradient(135deg, rgba(0,0,0,0.05), rgba(255,255,255,0.7));
+      border-radius: 6px;
+      transform: rotate(15deg);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+      opacity: .9;
+    }
+
+    label {
+      display: inline-block;
+      width: 120px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 6px;
+      width: 200px;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+    }
+
+    input[type="submit"] {
+      width: auto;
+      padding: 8px 18px;
+      background: #8bc34a;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="paper">
+   <form action="https://formspree.io/f/xzzonrjv" method="POST">
+
+  <h1 style="color: rgb(0, 0, 0);">FORMULIR</h1>
+  <h3><marquee>HARAP ISI FORMULIR</marquee></h3>
+
+  <form>
+
+    <label for="nama">Nama</label>
+    <input type="text" id="nama" name="nama">
+    <br><br>
+
+    <label for="alamat">Alamat</label>
+    <input type="text" id="alamat" name="alamat">
+    <br><br>
+
+    <label for="kota">Asal Kota</label>
+    <select id="kota" name="kota">
+      <option>Cianjur</option>
+      <option>Bandung</option>
+      <option>Bogor</option>
+      <option>Sukabumi</option>
+      <option>Tokyo</option>
+    </select>
+    <br><br>
+
+    <label for="sekolah">Sekolah</label>
+    <input type="text" id="sekolah" name="sekolah">
+    <br><br><br>
+
+    <input type="submit" value="Kirimkan Data">
+
+  </form>
+
+  <br><br>
+  <h2 style="color: rgb(255, 200, 30);">OLEH:</h2>
+
+  <img src="/storage/emulated/0/Pictures/Screenshots/IMG_20251120_092441.jpg" width="230">
+
+</div>
+
+</body>
+</html>
